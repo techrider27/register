@@ -38,7 +38,7 @@ body {
 
 .box .inputbox input {
   width: 100%;
-  color: #ffffe0;
+  color: #ffff00;
   padding: 10px;
   font-size: 16px;
   letter-spacing: 1px;
@@ -58,8 +58,8 @@ body {
   transition: 0.5s ease-in;
 }
 
-.box .inputbox input:focus-within + label,
-.box .inputbox input:valid + label {
+.box .inputbox input:focus+label,
+.box .inputbox input:valid+label {
   top: -20px;
   left: 0;
   color: #ffff00;
@@ -80,6 +80,17 @@ body {
 .box input[type="submit"]:hover {
   cursor: pointer;
   background: #df5858;
+}
+
+.box input::placeholder {
+  color: #ffff00;
+}
+
+#active {
+  top: -20px;
+  left: 0;
+  color: #ffff00;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 480px) {
