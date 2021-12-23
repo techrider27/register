@@ -8,7 +8,7 @@
     <title>Feedback form</title>
   </head>
 
-  <body>
+  <body oncontextmenu="return false">
     <div class="main-div">
       <div class="box">
         <h1>Feedback Form</h1>
@@ -19,7 +19,7 @@
               name="fullName"
               id="fullName"
               pattern="[A-Za-z\s]{3,25}"
-              title="Please do not enter numeric value"
+              title="Please Enter your Name."
               required
             />
             <label for="username">Your Name</label>
@@ -31,7 +31,7 @@
               name="Semester"
               id="semester"
               pattern="[1-10\s]{1,2}"
-              title="Kindly enter your correct Semester"
+              title="Please Enter your Semester"
               required
             />
             <label for="Semester">Semester</label>
@@ -43,19 +43,44 @@
               name="Course"
               id="course"
               pattern="[A-Za-z\s]{2,25}"
-              title="Please enter your correct course name"
+              title="Please Enter your Course Name"
               required
             />
             <label for="Course">Course</label>
           </div>
 
           <div class="inputbox">
-            <input type="text" name="feedback" id="feedback" pattern="[A-Za-z\s]{2,4}" title="Please enter yes or no" required />
+            <input
+              type="text"
+              name="Session"
+              id="Session"
+              placeholder="Scratch The Bootstrap ~ Mr. Bhavjot Singh"
+              readonly
+            />
+            <label for="Session">Session Name</label>
+          </div>
+
+          <div class="inputbox">
+            <input
+              type="text"
+              name="feedback"
+              id="feedback"
+              pattern="[A-Za-z]{2,3}"
+              title="Please enter Yes or No"
+              required
+            />
             <label for="feedback">Do you want another session?</label><br />
           </div>
 
           <div class="inputbox">
-            <input type="text" name="suggestion" id="suggestion" pattern="[A-Za-z\s]{2,50}" title="Please enter some feedback or type Nil" required />
+            <input
+              type="text"
+              name="suggestion"
+              id="suggestion"
+              pattern="[A-Za-z\s]{2,50}"
+              title="Please enter your feedback or type Nil as this is a required field"
+              required
+            />
             <label for="suggestion">Any Suggestions</label>
           </div>
           <input type="submit" value="Submit" />
